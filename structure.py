@@ -1,5 +1,5 @@
 
-
+#Question 1
 
 def is_balanced(expression):
     stack = []
@@ -14,3 +14,19 @@ def is_balanced(expression):
                 return False
 
     return not stack  
+
+
+#Question 2
+
+def remove_duplicates(sequence):
+    seen = set()
+    result = []
+
+    for element in sequence:
+        if element not in seen:
+            seen.add(element)
+            result.append(element)
+
+    return result
+
+
