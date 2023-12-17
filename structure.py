@@ -30,3 +30,18 @@ def remove_duplicates(sequence):
     return result
 
 
+#Question 3
+import string
+
+def word_frequency(sentence):
+    translator = str.maketrans("", "", string.punctuation)
+    sentence = sentence.translate(translator).lower()
+
+    
+    words = sentence.split()
+
+    frequency_dict = {}
+    for word in words:
+        frequency_dict[word] = frequency_dict.get(word, 0) + 1
+
+    return frequency_dict
